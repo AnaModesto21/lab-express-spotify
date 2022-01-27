@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" id="col">Title</th>
+      <th scope="col" id="col">Listen</th>
+    </tr>
+  </thead>
+  {{#each albumSongs}}
+  <tbody>
+    <tr>
+      <th scope="row" id="row">{{this.name}}</th>
+      <td id="play"><audio controls>
+            <source src='this.preview_url' type="audio/ogg">
+          </audio>
+    </td>
+    </tr>
+{{/each}}
+  </tbody>
+</table>
